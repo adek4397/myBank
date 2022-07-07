@@ -46,14 +46,14 @@
             <form>
                 <div class="row">
                     <div class="col">
-                      <input type="number" class="form-control" placeholder="Numer konta" min="1" max="20">
+                      <input id="transfer_account_number" type="number" class="form-control" placeholder="Numer konta" min="1" max="20">
                     </div>
                     <div class="col">
-                      <input type="number" class="form-control" placeholder="Kwota" min="1" max="20">
+                      <input id="transfer_sum" type="number" class="form-control" placeholder="Kwota" min="1" max="20">
                     </div>
                 </div>
 
-                <button class="btn btn-primary btn-sm col-12 col-sm-12 col-md-4 col-lg-4" id="button" type="button">Wyslij</button>
+                <button class="btn btn-primary btn-sm col-12 col-sm-12 col-md-4 col-lg-4" id="transfer_button" type="button">Wyslij</button>
             </form>
         </section>
 

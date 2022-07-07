@@ -2,6 +2,10 @@ const account_name = document.querySelector("#name");
 const account_number = document.querySelector("#account_number");
 const account_money = document.querySelector("#money");
 
+const transfer_account_number = document.querySelector("#transfer_account_number");
+const transfer_su = document.querySelector("#transfer_su");
+const transfer_button = document.querySelector("#transfer_button");
+
 
 $.post("php/dashboard.php", function(result){
     // console.log(result);
@@ -15,3 +19,7 @@ $.post("php/dashboard.php", function(result){
     account_number.innerHTML = query_array_json[0];
     account_money.innerHTML =  query_array_json[4];
 });
+
+transfer_button.addEventListener("click", function(){
+    
+})
