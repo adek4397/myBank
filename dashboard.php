@@ -58,10 +58,10 @@
         </section>
 
         <section class="user-name col-12 col-sm-12 col-md-5 col-lg-4">
-          <h3>Witaj, Adrian</h3>
-          <p>Twój numer konta: <b>1</b></p>
+          <h3 id="name">Witaj, Adrian</h3>
+          <p>Twój numer konta: <b id="account_number">1</b></p>
           <hr>
-          <p>Posiadasz: <b>1500</b> ruskich monet</p>
+          <p>Posiadasz: <b id="money">1500</b> ruskich monet</p>
         </section>
     </div>
 

@@ -19,9 +19,9 @@
 
             $query_array = mysqli_fetch_array($query);
 
-            echo $query_array['id'];
-            echo $query_array['name'];
-            echo $query_array['money'];
+            $query_array_json = json_encode($query_array);
+
+            echo $query_array_json;
         }
         else{
             echo "false_conect";
