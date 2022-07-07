@@ -1,0 +1,28 @@
+.row-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.transfer{
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.transfer h4{
+    margin-bottom: 15px;
+}
+
+.transfer button{
+    margin: 10px 0;
+}
+
+.user-name{
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}

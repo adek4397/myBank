@@ -1,0 +1,52 @@
+html, body {
+    width: 100%;
+    height: 100%;   
+    background-color: rgb(236, 239, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-floating {
+    margin-bottom: 5px;
+}
+
+.myHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.myHeader img {
+    width: 125px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form button {
+    margin: auto;
+}
+
+.checkbox {
+    margin-left: 15px;
+}
+
+.invalid-login-data {
+    text-align: center;
+    margin: 15px;
+    color: red;
+    display: none;
+}
+
