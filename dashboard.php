@@ -19,6 +19,7 @@
     <link href="css-bootstrap/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css-bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/jquery-3.6.0.js"></script>
   </head>
   <body class="d-flex flex-column h-100">
     <nav>

@@ -7,7 +7,7 @@
     require_once("db_conect.php");
     require_once("function.php");
 
-    if(isset($_POST['email']) && isset($_POST['password'])) {
+    if(isset($_POST['email']) && isset($_POST['password'])){
         $enter_email = $_POST['email'];
         $enter_password = $_POST['password'];
 
@@ -29,7 +29,7 @@
                 $query_array = mysqli_fetch_array($query);
 
                 $_SESSION['logging'] = true;
-                // $_SESSION['id'] = $query_array['id']; 
+                $_SESSION['id'] = $query_array['id']; 
                 // $_SESSION['name'] = $query_array['name']; 
                 // $_SESSION['email'] = $query_array['email']; 
                 // $_SESSION['password'] = $query_array['password']; 
@@ -48,5 +48,8 @@
         }
 
         mysqli_close($conection);
+    }
+    else{
+        exit();
     }
 ?>
