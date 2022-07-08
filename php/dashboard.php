@@ -27,6 +27,8 @@
             echo "false_conect";
             // echo "No connection with data base";
         }
+
+        mysqli_close($conection);
     }    
     else{
         // echo "no user";
