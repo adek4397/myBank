@@ -23,7 +23,9 @@ $.post("php/dashboard.php", function(result){
 transfer_button.addEventListener("click", function(){
     if(Number(transfer_account_number.value) > 0 && Number(transfer_sum.value)){
         if(Number.isInteger(Number(transfer_account_number.value))){
-            
+            $.post("php/dashboard.php", {transfer_account_number: transfer_account_number.value, transfer_sum: transfer_sum.value}, function(result){
+                console.log(result);
+            });
         }
         else{
             alert("Numer konta musi być liczbą całkowita");
