@@ -3,7 +3,7 @@ const account_number = document.querySelector("#account_number");
 const account_money = document.querySelector("#money");
 
 const transfer_account_number = document.querySelector("#transfer_account_number");
-const transfer_su = document.querySelector("#transfer_su");
+const transfer_sum = document.querySelector("#transfer_sum");
 const transfer_button = document.querySelector("#transfer_button");
 
 
@@ -21,5 +21,15 @@ $.post("php/dashboard.php", function(result){
 });
 
 transfer_button.addEventListener("click", function(){
-    
+    if(Number(transfer_account_number.value) > 0 && Number(transfer_sum.value)){
+        if(Number.isInteger(Number(transfer_account_number.value))){
+            
+        }
+        else{
+            alert("Numer konta musi być liczbą całkowita");
+        }
+    }
+    else{
+        alert("Liczba musi być wieksza od zera");
+    }
 })
