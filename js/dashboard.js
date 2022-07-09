@@ -27,6 +27,39 @@ transfer_button.addEventListener("click", function(){
 
             $.post("php/transfer.php", {transfer_account_number: transfer_account_number.value, transfer_sum: transfer_sum.value}, function(result){
                 console.log(result);
+
+                if(result == "transfer_account_number false"){
+                    alert("Nie ma takiego numru konta");
+                }
+
+                if(result == "transfer_account_number same"){
+                    alert("Nie możesz wysłać piniędzy do samego siebie");
+                }
+
+                if(result == "transfer_account_sum false"){
+                    alert("Posiadasz zamoało piniędzy biedaku");
+                }
+
+                if(result == "transfer successful"){
+                    alert("Operacja zakończona sukcesem");
+
+                    $.post("php/dashboard.php", function(result){
+
+                        if(result == "false_conect"){
+                            alert("Brak połacznia");
+                        }
+                        else{
+                            var query_array_json = JSON.parse(result);
+                    
+                            account_name.innerHTML = "Witaj, "+query_array_json[1];
+                            account_number.innerHTML = query_array_json[0];
+                            account_money.innerHTML =  query_array_json[4];   
+                        }
+                    });  
+                    
+                    transfer_account_number.value = "";
+                    transfer_sum.value = "";
+                }
             });
         }
         else{
