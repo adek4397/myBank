@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     if(isset($_SESSION['logging'])){
       header("Location: dashboard.php");
     }
