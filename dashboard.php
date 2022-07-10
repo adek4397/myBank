@@ -5,8 +5,19 @@
   session_start();
 
   if(!isset($_SESSION['logging'])){
-    header("Location: index.html");
+    header("Location: index.php");
   }
+
+  // if(isset($GLOBALS[$_SESSION['id']])){
+  //   echo $GLOBALS[$_SESSION['id']];
+
+  //   if($GLOBALS[$_SESSION['id']] != $_SERVER['HTTP_USER_AGENT']){
+  //     header("Location: first_login.html");
+  //   }
+  // }
+  // else{
+  //   $GLOBALS[$_SESSION['id']] = $_SERVER['HTTP_USER_AGENT'];
+  // }
 ?>
 
 <!doctype html>

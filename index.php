@@ -1,3 +1,9 @@
+<?php
+    if(isset($_SESSION['logging'])){
+      header("Location: dashboard.php");
+    }
+?>
+
 <!doctype html>
 <html lang="pl">
   <head>
