@@ -65,7 +65,7 @@ function check_input() {
     // alert("prawidłowy");
     
     $.post("php/login.php", {email: email.value, password: password.value}, function(data, status, result){
-      // console.log(result);
+      console.log(result);
 
       if(result.responseText == 'false_conect'){
         field_validadtion.style.display = "block";

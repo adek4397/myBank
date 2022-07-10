@@ -1,5 +1,5 @@
 <?php
-    error_reporting(0);
+    //error_reporting(0);
     //disabling showing errors
 
     session_start();
@@ -30,12 +30,29 @@
 
                 $_SESSION['logging'] = true;
                 $_SESSION['id'] = $query_array['id']; 
+                $cipa = $query_array['sesion_id'];
                 // $_SESSION['name'] = $query_array['name']; 
                 // $_SESSION['email'] = $query_array['email']; 
                 // $_SESSION['password'] = $query_array['password']; 
                 // $_SESSION['money'] = $query_array['money'];
+                $session_id = session_id();
+                $id = $query_array['id'];
 
-                echo "true_user";
+                
+                if($query_array['sesion_id'] == ""){
+
+                    $query = mysqli_query($conection, sprintf("UPDATE `users` SET `sesion_id` = '$session_id' WHERE `users`.`id` = '$id'"));
+                    echo "true_user";
+                }
+                else{
+
+                    if($query_array['sesion_id'] == session_id()){
+                        echo "true_user";
+                    }
+                    else{
+                        header("Location: ../first_login.html");
+                    }
+                }
             }
             else{
                 echo "false_user";
