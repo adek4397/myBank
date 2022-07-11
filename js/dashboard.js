@@ -53,7 +53,7 @@ transfer_button.addEventListener("click", function(){
                     
                             account_name.innerHTML = "Witaj, "+query_array_json[1];
                             account_number.innerHTML = query_array_json[0];
-                            account_money.innerHTML =  query_array_json[4];   
+                            account_money.innerHTML =  query_array_json[5];   
                         }
                     });  
                     

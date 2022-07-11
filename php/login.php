@@ -28,9 +28,7 @@
 
                 $query_array = mysqli_fetch_array($query);
 
-                $_SESSION['logging'] = true;
-                $_SESSION['id'] = $query_array['id']; 
-                $cipa = $query_array['sesion_id'];
+                $_SESSION['id'] = $query_array['id'];
                 // $_SESSION['name'] = $query_array['name']; 
                 // $_SESSION['email'] = $query_array['email']; 
                 // $_SESSION['password'] = $query_array['password']; 
@@ -42,15 +40,21 @@
                 if($query_array['sesion_id'] == ""){
 
                     $query = mysqli_query($conection, sprintf("UPDATE `users` SET `sesion_id` = '$session_id' WHERE `users`.`id` = '$id'"));
+
+                    $_SESSION['logging'] = true; 
+
                     echo "true_user";
                 }
                 else{
 
                     if($query_array['sesion_id'] == session_id()){
+
+                        $_SESSION['logging'] = true;
+
                         echo "true_user";
                     }
                     else{
-                        header("Location: ../first_login.html");
+                        echo "first_login";
                     }
                 }
             }
@@ -67,6 +71,6 @@
         mysqli_close($conection);
     }
     else{
-        exit();
+        header("Location: index.php");
     }
 ?>

@@ -65,7 +65,7 @@ function check_input() {
     // alert("prawidłowy");
     
     $.post("php/login.php", {email: email.value, password: password.value}, function(data, status, result){
-      console.log(result);
+      // console.log(result);
 
       if(result.responseText == 'false_conect'){
         field_validadtion.style.display = "block";
@@ -80,6 +80,11 @@ function check_input() {
       if(result.responseText == 'true_user'){
         // console.log(location.href);
         location.href = "dashboard.php";
+      }
+
+      if(result.responseText == 'first_login'){
+        // console.log(location.href);
+        location.href = "first_login.html";
       }
     });
   }else{

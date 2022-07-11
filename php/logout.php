@@ -3,7 +3,7 @@
 
     session_start();
 
-    if(isset($_SESSION['logging']) && isset($_SESSION['id'])){
+    if(isset($_SESSION['id'])){
 
         $conection = mysqli_connect($db_address, $db_user, $db_password, $db_name);
 
@@ -15,11 +15,15 @@
 
             mysqli_close($conection);
         }
+
+        unset($_SESSION['logging']);
+        unset($_SESSION["id"]);
+    
+        session_destroy();
+    
+        header("Location: ../index.php");
     }
-
-    unset($_SESSION['logging']);
-
-    session_destroy();
-
-    header("Location: ../index.php");
+    else{
+        header("Location: ../index.php");
+    }
 ?>
