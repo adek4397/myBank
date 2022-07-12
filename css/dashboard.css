@@ -26,3 +26,19 @@
     padding: 10px;
     margin-bottom: 10px;
 }
+
+table{
+    text-align: center;
+}
+
+table tr{
+    border-bottom: 1px solid black;
+}
+
+.value-green{
+    color: yellowgreen;
+}
+
+.value-red{
+    color: red;
+}

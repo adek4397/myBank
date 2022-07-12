@@ -15,11 +15,10 @@
 
             mysqli_close($conection);
         }
-
-        unset($_SESSION['logging']);
-        unset($_SESSION["id"]);
     
         session_destroy();
+
+        $_SESSION = [];
     
         header("Location: ../index.php");
     }
