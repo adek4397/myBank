@@ -32,7 +32,7 @@
                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                   <li><a class="dropdown-item" id="operation" href="#">Operacje</a></li>
                   <li><a class="dropdown-item" href="#">Ustawienia</a></li>
-                  <li><a class="dropdown-item" href="#">Profil</a></li>
+                  <li><a class="dropdown-item" id="dashboard"href="#">Profil</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="php/logout.php">Wyloguj się</a></li>
                 </ul>

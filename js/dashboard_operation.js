@@ -1,12 +1,12 @@
-const dropdown_item = document.querySelector("#operation");
-const container = document.querySelector("#container");
+const dropdown_item_operation = document.querySelector("#operation");
+const container_operation = document.querySelector("#container");
 var id = account_number.innerHTML;
 
-dropdown_item.addEventListener("click", function(){
+dropdown_item_operation.addEventListener("click", function(){
 
     $.post("php/operation.php", function(result){
         // console.log(result);
-        container.innerHTML = ""; 
+        container_operation.innerHTML = ""; 
 
         if(result == "false_conect"){
             alert("Brak połączenia");
@@ -25,7 +25,7 @@ dropdown_item.addEventListener("click", function(){
     
             table += "</table>";
     
-            container.innerHTML = table; 
+            container_operation.innerHTML = table; 
 
             check();
         }      
@@ -37,9 +37,11 @@ dropdown_item.addEventListener("click", function(){
     
         for(let i=0; i<td_client_money.length; i++){
             if(td_client_money[i].innerHTML != id){
+                td_value[i].innerHTML = "- "+td_value[i].innerHTML;
                 td_value[i].classList.add('value-red');
             }
             else{
+                td_value[i].innerHTML = "+ "+td_value[i].innerHTML;
                 td_value[i].classList.add('value-green');
             }
         }

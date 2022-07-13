@@ -12,6 +12,7 @@
 
             $transfer_account_number = $_POST['transfer_account_number'];
             $transfer_sum = $_POST['transfer_sum'];
+            $date = date('Y-m-d');
 
             if($transfer_account_number > 0 && $transfer_sum > 0){
 
@@ -39,6 +40,8 @@
                                 $query_addidtion_money = mysqli_query($conection, sprintf("UPDATE users SET money=$addidtion_money WHERE id=$transfer_account_number"));
 
                                 $query_remove_money = mysqli_query($conection, sprintf("UPDATE users SET money=$remove_money WHERE id=$id"));
+
+                                $query_add_post = mysqli_query($conection, sprintf("INSERT INTO `operation` (`id`, `date`, `ovner_money`, `client_money`, `value`) VALUES (NULL, '$date', '$id', '$transfer_account_number', '$transfer_sum');"));
 
                                 echo "transfer successful";
                             }

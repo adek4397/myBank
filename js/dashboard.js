@@ -1,3 +1,18 @@
+dashboard_update();
+
+const dropdown_item_dashboard = document.querySelector("#dashboard");
+const container_dashboard = document.querySelector("#container");
+
+dropdown_item_dashboard.addEventListener("click", function(){
+    location.reload(true);
+})
+
+
+
+
+
+
+function dashboard_update(){
 const account_name = document.querySelector("#name");
 const account_number = document.querySelector("#account_number");
 const account_money = document.querySelector("#money");
@@ -70,3 +85,4 @@ transfer_button.addEventListener("click", function(){
         alert("Liczba musi być wieksza od zera");
     }
 })
+}
