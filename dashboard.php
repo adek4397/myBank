@@ -31,7 +31,7 @@
                 </a>
                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                   <li><a class="dropdown-item" id="operation" href="#">Operacje</a></li>
-                  <li><a class="dropdown-item" href="#">Ustawienia</a></li>
+                  <li><a class="dropdown-item" id="setings" href="#">Ustawienia</a></li>
                   <li><a class="dropdown-item" id="dashboard"href="#">Profil</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="php/logout.php">Wyloguj się</a></li>
@@ -70,5 +70,6 @@
     <script src="js-bootstrap/bootstrap.bundle.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="js/dashboard_operation.js"></script>
+    <script src="js/dashboard_setngs.js"></script>
   </body>
 </html>

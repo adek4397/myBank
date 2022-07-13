@@ -2,13 +2,11 @@ dashboard_update();
 
 const dropdown_item_dashboard = document.querySelector("#dashboard");
 const container_dashboard = document.querySelector("#container");
+var is_admin = '';
 
 dropdown_item_dashboard.addEventListener("click", function(){
     location.reload(true);
 })
-
-
-
 
 
 
@@ -23,21 +21,22 @@ const transfer_button = document.querySelector("#transfer_button");
 
 
 $.post("php/dashboard.php", function(result){
-
+    
     if(result == "false_conect"){
         alert("Brak połacznia");
     }
     else{
         var query_array_json = JSON.parse(result);
-
-        account_name.innerHTML = "Witaj, "+query_array_json[1];
-        account_number.innerHTML = query_array_json[0];
-        account_money.innerHTML =  query_array_json[5];   
+        
+        account_name.innerHTML = "Witaj, "+query_array_json['name'];
+        account_number.innerHTML = query_array_json['id'];
+        account_money.innerHTML =  query_array_json['money'];
+        is_admin = query_array_json['is_admin'];
     }
 });
 
 transfer_button.addEventListener("click", function(){
-    if(Number(transfer_account_number.value) > 0 && Number(transfer_sum.value)){
+    if(Number(transfer_account_number.value) > 0 && Number(transfer_sum.value) > 0){
         if(Number.isInteger(Number(transfer_account_number.value))){
 
             $.post("php/transfer.php", {transfer_account_number: transfer_account_number.value, transfer_sum: transfer_sum.value}, function(result){
@@ -86,3 +85,8 @@ transfer_button.addEventListener("click", function(){
     }
 })
 }
+
+
+
+
+

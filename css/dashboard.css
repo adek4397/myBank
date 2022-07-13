@@ -42,3 +42,13 @@ table tr{
 .value-red{
     color: red;
 }
+
+.change{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.change button{
+    margin-left: 5px;
+}
