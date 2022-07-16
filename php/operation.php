@@ -33,6 +33,7 @@
                 $oepration_array[$i] = $query_array;
             }
 
+
             $json_oepration_array = json_encode($oepration_array);
 
             echo $json_oepration_array;

@@ -1,11 +1,10 @@
 const dropdown_item_operation = document.querySelector("#operation");
 const container_operation = document.querySelector("#container");
-var id = account_number.innerHTML;
+var ovner_id = document.querySelector("#account_number");
 
 dropdown_item_operation.addEventListener("click", function(){
 
     $.post("php/operation.php", function(result){
-        // console.log(result);
         container_operation.innerHTML = ""; 
 
         if(result == "false_conect"){
@@ -36,7 +35,8 @@ dropdown_item_operation.addEventListener("click", function(){
         const td_value = document.querySelectorAll('.value');
     
         for(let i=0; i<td_client_money.length; i++){
-            if(td_client_money[i].innerHTML != id){
+ 
+            if(td_client_money[i].innerHTML != ovner_id.innerHTML){
                 td_value[i].innerHTML = "- "+td_value[i].innerHTML;
                 td_value[i].classList.add('value-red');
             }

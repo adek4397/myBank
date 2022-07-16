@@ -17,12 +17,13 @@ dropdown_item_setings.addEventListener("click", function(){
             if(Number(change_input.value) > 0 && Number(change_input.value) < 4294967){
                 $.post("php/setings.php", {money: change_input.value}, function(result){
                     
-                    if(result = "false_conect"){
+                    if(result == "false_conect"){
                         alert('Brak połącznia');
                     }
 
-                    if(result = "change successful"){
+                    if(result == "change successful"){
                         alert('Operacja zakończona powodzeniem');
+                        change_input.value = "";
                     }
                 });
             }
