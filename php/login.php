@@ -30,9 +30,9 @@
 
                 $_SESSION['id'] = $query_array['id'];
                 // $_SESSION['name'] = $query_array['name']; 
-                // $_SESSION['email'] = $query_array['email']; 
-                // $_SESSION['password'] = $query_array['password']; 
                 // $_SESSION['money'] = $query_array['money'];
+                // $_SESSION['is_admin'] = $query_array['is_admin'];
+                // $_SESSION['sesion_id'] = $query_array['sesion_id'];
                 $session_id = session_id();
                 $id = $query_array['id'];
 

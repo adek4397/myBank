@@ -1,10 +1,16 @@
 const checbox = document.querySelector("#checkbox");
-
-checbox.addEventListener("input", show_passowrd);
-
 const button = document.querySelector("#button");
+const enterEvent = document.querySelector("#floatingPassword")
 
-button.addEventListener("click", check_input);
+checbox.addEventListener("input", show_passowrd());
+button.addEventListener("click", check_input());
+enterEvent.addEventListener("keypress", function(event){
+  if(event.key == "Enter"){
+    check_input();
+  }
+});
+
+
 
 
 function show_passowrd() {
@@ -59,13 +65,10 @@ function check_input() {
   const password = document.querySelector("#floatingPassword");
   const field_validadtion = document.querySelector(".invalid-login-data")
 
-  // email_validation(email.value);
 
   if(email_validation(email.value) == true && password_validation(password.value) == true){
-    // alert("prawidłowy");
     
     $.post("php/login.php", {email: email.value, password: password.value}, function(data, status, result){
-      // console.log(result);
 
       if(result.responseText == 'false_conect'){
         field_validadtion.style.display = "block";

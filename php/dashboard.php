@@ -15,7 +15,7 @@
 
             $id = $_SESSION["id"];
 
-            $query = mysqli_query($conection, sprintf("SELECT * FROM `users` WHERE id='$id'"));
+            $query = mysqli_query($conection, sprintf("SELECT id, name, money, is_admin FROM `users` WHERE id='$id'"));
 
             $query_array = mysqli_fetch_array($query);
 
