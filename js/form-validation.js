@@ -4,11 +4,11 @@ const enterEvent = document.querySelector("#floatingPassword")
 
 checbox.addEventListener("input", show_passowrd());
 button.addEventListener("click", check_input());
-enterEvent.addEventListener("keypress", function(event){
-  if(event.key == "Enter"){
-    check_input();
-  }
-});
+// enterEvent.addEventListener("keypress", function(event){
+//   if(event.key == "Enter"){
+//     check_input();
+//   }
+// });
 
 
 
