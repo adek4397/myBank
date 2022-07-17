@@ -1,6 +1,6 @@
 const checbox = document.querySelector("#checkbox");
 const button = document.querySelector("#button");
-const enterEvent = document.querySelector("#floatingPassword")
+// const enterEvent = document.querySelector("#floatingPassword");
 
 checbox.addEventListener("input", show_passowrd());
 button.addEventListener("click", check_input());
@@ -9,8 +9,6 @@ button.addEventListener("click", check_input());
 //     check_input();
 //   }
 // });
-
-
 
 
 function show_passowrd() {

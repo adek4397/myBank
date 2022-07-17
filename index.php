@@ -40,7 +40,7 @@
                   <input type="checkbox" value="" id="checkbox"> Pokaż hasło
                 </label>
             </div>
-                <button class="btn btn-lg btn-primary col-12 col-sm-12 col-md-4 col-lg-4" id="button" type="button">Zaloguj się</button>
+                <button class="btn btn-lg btn-primary col-12 col-sm-12 col-md-6 col-lg-4" id="button" type="button">Zaloguj się</button>
 
                 <div class="invalid-login-data">Nie prawidłowy E-mail lub Hasło</div>
         </form>
