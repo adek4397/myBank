@@ -27,6 +27,8 @@ $.post("php/dashboard.php", function(result){
     }
     else{
         var query_array_json = JSON.parse(result);
+
+        console.log(query_array_json);
         
         account_name.innerHTML = "Witaj, "+query_array_json['name'];
         account_number.innerHTML = query_array_json['id'];
@@ -65,9 +67,9 @@ transfer_button.addEventListener("click", function(){
                         else{
                             var query_array_json = JSON.parse(result);
                     
-                            account_name.innerHTML = "Witaj, "+query_array_json[1];
-                            account_number.innerHTML = query_array_json[0];
-                            account_money.innerHTML =  query_array_json[5];   
+                            account_name.innerHTML = "Witaj, "+query_array_json['name'];
+                            account_number.innerHTML = query_array_json['id'];
+                            account_money.innerHTML =  query_array_json['money'];   
                         }
                     });  
                     

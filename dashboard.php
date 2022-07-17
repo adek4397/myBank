@@ -73,3 +73,10 @@
     <script src="js/dashboard_setngs.js"></script>
   </body>
 </html>
+
+<?php
+  if(session_id() != $_SESSION['sesion_id']){
+    unset($_SESSION['logging']);
+    header("Location: index.php");
+  }
+?>

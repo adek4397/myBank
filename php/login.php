@@ -29,10 +29,10 @@
                 $query_array = mysqli_fetch_array($query);
 
                 $_SESSION['id'] = $query_array['id'];
-                // $_SESSION['name'] = $query_array['name']; 
+                $_SESSION['name'] = $query_array['name']; 
                 // $_SESSION['money'] = $query_array['money'];
-                // $_SESSION['is_admin'] = $query_array['is_admin'];
-                // $_SESSION['sesion_id'] = $query_array['sesion_id'];
+                $_SESSION['is_admin'] = $query_array['is_admin'];
+                $_SESSION['sesion_id'] = $query_array['sesion_id'];
                 $session_id = session_id();
                 $id = $query_array['id'];
 
@@ -42,6 +42,7 @@
                     $query = mysqli_query($conection, sprintf("UPDATE `users` SET `sesion_id` = '$session_id' WHERE `users`.`id` = '$id'"));
 
                     $_SESSION['logging'] = true; 
+                    $_SESSION['sesion_id'] = $session_id;
 
                     echo "true_user";
                 }
@@ -50,7 +51,6 @@
                     if($query_array['sesion_id'] == session_id()){
 
                         $_SESSION['logging'] = true;
-
                         echo "true_user";
                     }
                     else{

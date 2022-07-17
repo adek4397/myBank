@@ -15,9 +15,17 @@
 
             $id = $_SESSION["id"];
 
-            $query = mysqli_query($conection, sprintf("SELECT id, name, money, is_admin FROM `users` WHERE id='$id'"));
+            $query = mysqli_query($conection, sprintf("SELECT money, sesion_id FROM `users` WHERE id='$id'"));
 
-            $query_array = mysqli_fetch_array($query);
+            $query_money = mysqli_fetch_array($query);
+
+            $query_array["id"] = $_SESSION['id'];
+            $query_array["name"] = $_SESSION['name'];
+            $query_array["money"] = $query_money['money'];
+            $query_array["sesion_id"] = $query_money['sesion_id'];
+            $query_array["is_admin"] = $_SESSION['is_admin'];
+
+            $_SESSION['sesion_id'] = $query_money['sesion_id'];
 
             $query_array_json = json_encode($query_array);
 
