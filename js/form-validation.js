@@ -16,18 +16,18 @@ function show_passowrd() {
 }
 
 function email_validation(email) {  
-  if((email.length > 0) && (email.length < 20) ){
+  if((email.length > 0) && (email.length < 20) ) {
   
     if(email.match(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)){
       return true;
-    }else{
+    }
+    else {
       return false;
     }
 
-  }else{
-    
+  }
+  else {
     return false;
-
   }
 }
 
