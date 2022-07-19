@@ -149,14 +149,14 @@ body {
     padding: 25px;
 }
 
-.step #dot1{
-    background-color: rgb(13, 110, 253);
-}
-
 .step .dot{
     width: 15px;
     height: 15px;
     margin: 10px;
     border-radius: 25px;
     background-color: lightgray;
+}
+
+.step #dot1{
+    background-color: rgb(13, 110, 253);
 }
