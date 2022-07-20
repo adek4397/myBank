@@ -40,11 +40,8 @@ function password_validation(password) {
     }else{
       return false;
     }
-
   }else{
-    
     return false;
-
   }
 }
 
