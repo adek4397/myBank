@@ -27,7 +27,7 @@
 
         <form class="col-12 col-sm-12 col-md-12 col-lg-4 needs-validation">
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" maxlength="20" required>
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" maxlength="30" required>
                 <label for="floatingInput">Adres E-mail</label>
             </div>
             <div class="form-floating">

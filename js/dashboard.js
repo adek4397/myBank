@@ -42,7 +42,6 @@ transfer_button.addEventListener("click", function(){
         if(Number.isInteger(Number(transfer_account_number.value))){
 
             $.post("php/transfer.php", {transfer_account_number: transfer_account_number.value, transfer_sum: transfer_sum.value}, function(result){
-                console.log(result);
 
                 if(result == "transfer_account_number false"){
                     alert("Nie ma takiego numru konta");

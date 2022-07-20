@@ -46,5 +46,4 @@ dropdown_item_operation.addEventListener("click", function(){
             }
         }
     }
-
 })

@@ -166,3 +166,7 @@ body {
 .step #dot1{
     background-color: rgb(13, 110, 253);
 }
+
+.container .thank{
+    display: none;
+}

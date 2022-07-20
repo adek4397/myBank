@@ -23,6 +23,8 @@ const dot2 = document.querySelector('#dot2');
 const dot3 = document.querySelector('#dot3');
 const dot4 = document.querySelector('#dot4');
 
+const thank = document.querySelector('.thank');
+
 var step_progres = 1;
 
 button_next.addEventListener("click", function(){
@@ -63,7 +65,26 @@ button_next.addEventListener("click", function(){
 
     case 4:
       if(checkbox_validation() == true){
-        alert("The end");
+
+        $.post("php/signup.php", {name: input_name.value, email: input_email.value, password: input_passowrd1.value}, function(result){
+
+          if(result == "false_conect") {
+            alert("Brak połączenia");
+          }
+
+          if(result == "user_exist") {
+            alert("Urzytkownik o podanym adresie email już istnieje");
+            location.reload(true);
+          }
+
+          if(result == "user_create") {
+            section_last_step.style.display = "none";
+            dots.style.display = "none";
+            title.style.display = "none";
+            section_buttons.style.display = "none";
+            thank.style.display = "flex";
+          }
+        });
       }
       break;
   }
@@ -188,8 +209,6 @@ function password_validation(password) {
 }
 
 function password_identical(password1, password2) {
-  console.log(password1);
-  console.log(password2);
 
   if(password1 == password2) {
     input_passowrd1.classList.remove('invalid');
