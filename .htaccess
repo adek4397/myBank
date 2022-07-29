@@ -1,0 +1,12 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule strona-logowania-do-panelu index.php
+RewriteRule tworzenie-konta signup.html
+RewriteRule pulpit-urzytkownika dashboard.php
+RewriteRule zakonczenie-sesi first_login.html
+RewriteRule regulamin statut.html

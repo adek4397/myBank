@@ -22,9 +22,9 @@
     
         session_destroy();
 
-        header("Location: ../index.php");
+        header("Location: ../strona-logowania-do-panelu");
     }
     else{
-        header("Location: ../index.php");
+        header("Location: ../strona-logowania-do-panelu");
     }
 ?>

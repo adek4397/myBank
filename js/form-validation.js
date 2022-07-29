@@ -66,11 +66,11 @@ function check_input() {
       }
 
       if(result.responseText == 'true_user'){
-        location.href = "dashboard.php";
+        location.href = "pulpit-urzytkownika";
       }
 
       if(result.responseText == 'first_login'){
-        location.href = "first_login.html";
+        location.href = "zakonczenie-sesi";
       }
     });
   }else{

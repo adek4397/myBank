@@ -38,6 +38,6 @@
 
         mysqli_close($conection);
     } else {
-        header("Location: ../index.php");
+        header("Location: strona-logowania-do-panelu");
     }
 ?>
