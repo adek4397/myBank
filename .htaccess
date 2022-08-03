@@ -10,3 +10,5 @@ RewriteRule tworzenie-konta signup.html
 RewriteRule pulpit-urzytkownika dashboard.php
 RewriteRule zakonczenie-sesi first_login.html
 RewriteRule regulamin statut.html
+
+Options -Indexes
